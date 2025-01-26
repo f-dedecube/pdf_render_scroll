@@ -25,6 +25,10 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    if (project.android.hasProperty("namespace")) {
+        namespace "dev.dedecube.pdfrenderscroll"
+    }
+
     compileSdkVersion 31
 
     sourceSets {
